@@ -9,7 +9,7 @@ Write-Host -ForegroundColor Green "Installing OSD Module"
 Install-Module OSD -Force -Verbose
 
 Write-Host -ForegroundColor Green "Starting OSDCloud (Windows 11 22H2 Pro en-us)"
-Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 22H2 -OSEdition Pro -OSLanguage en-us -OSLicense Retail
+Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 22H2 -OSEdition Pro -OSLanguage en-us -OSLicense Retail -ZTI
 sleep 5
 
 Write-Host -ForegroundColor Green "Setting OOBEDeploy up and creating .json"
