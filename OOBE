@@ -1,3 +1,10 @@
+Write-Host -ForegroundColor Green "Check for previous OSDCloud run"
+if ((Test-Path C:\OSDCloud\installed)) {
+Write-Host -ForegroundColor Green "OSDCloud was already executed. Restarting..."
+sleep 3
+wpeutil reboot
+}
+
 Write-Host -ForegroundColor Green "Installing OSD Module"
 Install-Module OSD -Force -Verbose
 
@@ -66,6 +73,10 @@ Start /Wait PowerShell -NoL -C Start-OOBEDeploy
 Start /Wait PowerShell -NoL -C Restart-Computer -Force
 '@
 $OOBETasksCMD | Out-File -FilePath 'C:\Windows\System32\OOBETasks.CMD' -Encoding ascii -Force
+
+sleep 2
+
+New-Item -Path C:\OSDCloud\installed -ItemType File -Force
 
 sleep 5
 
