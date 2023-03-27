@@ -66,6 +66,8 @@ $OOBEDeployJson | Out-File -FilePath "C:\ProgramData\OSDeploy\OSDeploy.OOBEDeplo
 
 Write-Host -ForegroundColor Green "Create C:\Windows\System32\OOBETasks.CMD"
 $OOBETasksCMD = @'
+taskkill /f /im OneDrive.exe
+C:\Windows\SysWOW64\OneDriveSetup.exe /uninstall
 PowerShell -NoL -Com Set-ExecutionPolicy RemoteSigned -Force
 Set Path = %PATH%;C:\Program Files\WindowsPowerShell\Scripts
 Start /Wait PowerShell -NoL -C Install-Module OSD -Force -Verbose
