@@ -16,7 +16,7 @@ Write-Host -ForegroundColor Green "Setting OOBEDeploy up and creating .json"
 $OOBEDeployJson = @'
 {
     "AddNetFX3":  {
-                      "IsPresent":  true
+                      "IsPresent":  false
                   },
     "Autopilot":  {
                       "IsPresent":  false
@@ -51,7 +51,7 @@ $OOBEDeployJson = @'
                     "Microsoft.ZuneVideo"
                    ],
     "UpdateDrivers":  {
-                          "IsPresent":  false
+                          "IsPresent":  true
                       },
     "UpdateWindows":  {
                           "IsPresent":  true
