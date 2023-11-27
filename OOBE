@@ -2,7 +2,7 @@ Write-Host -ForegroundColor Green "Check for previous OSDCloud run"
 if ((Test-Path C:\OSDCloud\installed)) {
 Write-Host -ForegroundColor Green "OSDCloud was already executed. Restarting..."
 sleep 3
-wpeutil reboot
+#wpeutil reboot
 }
 
 Write-Host -ForegroundColor Green "Installing OSD Module"
