@@ -60,7 +60,7 @@ $OOBEDeployJson = @'
                     "Microsoft.Windows.XGpuEjectDialog",
                     "Microsoft.XboxGameCallableUI",
                     "Microsoft.Windows.ParentalControls",
-                    "Microsoft.Services.Store.Engagement",
+                    "Microsoft.Services.Store.Engagement"
                     
                    ],
     "UpdateDrivers":  {
