@@ -48,19 +48,7 @@ $OOBEDeployJson = @'
                     "Microsoft.XboxSpeechToTextOverlay",
                     "Microsoft.YourPhone",
                     "Microsoft.ZuneMusic",
-                    "Microsoft.ZuneVideo",
-                    "Microsoft.OutlookForWindows",
-                    "Clipchamp.Clipchamp",
-                    "Microsoft.Windows.Ai.Copilot.Provider",
-                    "Microsoft.Windows.DevHome",
-                    "Microsoft.Windows.CrossDevice",
-                    "Microsoft.WindowsStore",
-                    "Microsoft.CredDialogHost",
-                    "Microsoft.MicrosoftEdgeDevToolClient",
-                    "Microsoft.Windows.XGpuEjectDialog",
-                    "Microsoft.XboxGameCallableUI",
-                    "Microsoft.Windows.ParentalControls",
-                    "Microsoft.Services.Store.Engagement"
+                    "Microsoft.ZuneVideo"
                    ],
     "UpdateDrivers":  {
                           "IsPresent":  true
