@@ -34,7 +34,6 @@ $OOBEDeployJson = @'
                     "Microsoft.MicrosoftEdgeDevToolClient",
                     "Microsoft.MicrosoftOfficeHub",
                     "Microsoft.MicrosoftSolitaireCollection",
-                    "Microsoft.MicrosoftStickyNotes",
                     "Microsoft.MSPaint",
                     "Microsoft.OutlookForWindows",
                     "Microsoft.People",
