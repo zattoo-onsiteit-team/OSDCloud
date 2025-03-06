@@ -8,18 +8,8 @@
 Write-Host -ForegroundColor Green "Installing OSD Module"
 Install-Module OSD -Force -Verbose
 
-Write-Host -ForegroundColor Green "Starting OSDCloud (Local Windows 11 23H2 Pro en-us Install)"
-$OSImagePath = "X:\OSD\Images\install.wim"
-
-# If install.wim exists, use it instead of downloading
-if (Test-Path $OSImagePath) {
-    Write-Host -ForegroundColor Green "Using local Windows image: $OSImagePath"
-    Start-OSDCloud -OSImage $OSImagePath -OSEdition Pro -OSLanguage en-us -OSLicense Retail -ZTI
-} else {
-    Write-Host -ForegroundColor Red "Local Windows image not found! Falling back to online install."
-    Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 23H2 -OSEdition Pro -OSLanguage en-us -OSLicense Retail -ZTI
-}
-
+Write-Host -ForegroundColor Green "Starting OSDCloud (Windows 11 23H2 Pro en-us)"
+Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 23H2 -OSEdition Pro -OSLanguage en-us -OSLicense Retail -ZTI
 sleep 5
 
 Write-Host -ForegroundColor Green "Setting OOBEDeploy up and creating .json"
