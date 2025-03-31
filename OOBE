@@ -7,7 +7,13 @@
 #$drive = Get-Volume | Where-Object { $_.FileSystemLabel -eq "OSDCloud" } | Select-Object -ExpandProperty DriveLetter
 #$WimPath = "$drive`:\OS\install.wim"
 Write-Host -ForegroundColor Green "Installing OSD Module"
+Uninstall-Module OSD -AllVersions -Force
+sleep 5
 Install-Module OSD -Force -Verbose
+Import-Module OSD -Force
+Get-Command -Module OSD | Where-Object { $_.Name -eq 'Start-OSDCloud' }
+(Get-Command Start-OSDCloud).Parameters.Keys
+sleep 20
 
 Write-Host -ForegroundColor Green "Starting OSDCloud (Windows 11 23H2 Pro en-us)"
 Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 23H2 -OSEdition Pro -OSLanguage en-us -OSLicense Retail -ZTI
