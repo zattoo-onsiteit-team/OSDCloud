@@ -11,7 +11,8 @@ Install-Module OSD -Force -Verbose
 
 Write-Host -ForegroundColor Green "Starting OSDCloud (Windows 11 23H2 Pro en-us)"
 #Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 23H2 -OSEdition Pro -OSLanguage en-us -OSLicense Retail -ZTI
-Start-OSDCloud -FindImageFil -OSImageIndex 1 -ZTI
+net use \\10.110.1.120\windows-image /user:IT-Server Bahn2KugelKeller
+Start-OSDCloud -ImageFileURL "10.110.1.120\windows-image\install.wim" -OSImageIndex 1 -ZTI
 sleep 5
 
 Write-Host -ForegroundColor Green "Setting OOBEDeploy up and creating .json"
