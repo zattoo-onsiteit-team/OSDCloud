@@ -10,7 +10,7 @@ Write-Host -ForegroundColor Green "Installing OSD Module"
 Install-Module OSD -Force -Verbose
 
 Write-Host -ForegroundColor Green "Starting OSDCloud (Windows 11 25H2 Pro en-us)"
-Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 23H2 -OSEdition Pro -OSLanguage en-us -OSLicense Retail -ZTI
+Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 25H2 -OSEdition Pro -OSLanguage en-us -OSLicense Retail -ZTI
 
 sleep 5
 
